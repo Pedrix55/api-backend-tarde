@@ -1,4 +1,5 @@
 const express = require('express');
+const env = require('dotenv/config')
 const alunoRouter = require('./alunosRouter');
 
 const database = require('./db');
@@ -9,7 +10,7 @@ app.use(express.json());
 app.use('/alunos', alunoRouter);
 
 
-app.listen(3000, async () => {
-    const resultDb = await database.sync({alter:true});
+app.listen(process.env.PORT, async () => {
+    const resultDb = await database.sync({force: true});
     console.log('server started');
 })

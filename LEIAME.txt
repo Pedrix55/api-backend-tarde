@@ -17,3 +17,6 @@ Tarefas:
         SEQUELIZE - MYSQL
     4. Relacionamentos
         Aluno x Atividade
+    5. Extras:
+        Instalar dotenv
+        Migrar aplicação postgreSQL
