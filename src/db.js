@@ -5,9 +5,15 @@ const { Sequelize } = require('sequelize');
 //});
 
 const dbSequelize = new Sequelize(process.env.DATABASE_URL,
-{"dialect": "postgres",
-"dialectOptions": {
-  "ssl": true
-}});
+{
+    options: { 
+        dialect: "postgres",
+        native: true,
+        ssl: true, 
+        dialectOptions: {
+          ssl: true
+        }
+      }
+});
 
 module.exports = dbSequelize;
