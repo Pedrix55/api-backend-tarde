@@ -4,6 +4,10 @@ const { Sequelize } = require('sequelize');
 //    dialect: process.env.DB_DIALECT, host: process.env.DB_HOST
 //});
 
-const dbSequelize = new Sequelize(process.env.DATABASE_URL);
+const dbSequelize = new Sequelize(process.env.DATABASE_URL,
+{"dialect": "postgres",
+"dialectOptions": {
+  "ssl": true
+}});
 
 module.exports = dbSequelize;
