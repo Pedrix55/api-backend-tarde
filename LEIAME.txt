@@ -20,3 +20,24 @@ Tarefas:
     5. Extras:
         Instalar dotenv
         Migrar aplicação postgreSQL
+
+    6. Deploy Heroku
+        Configuração de Banco
+            DATABASE_URL .env
+                DATABASE_URL=postgres://postgres:postgres@localhost:5432/alunos
+                DATABASE_URL=mysql://root:mysql@localhost:3306/alunos
+
+        Já realizado
+            Instalação heroku-cli
+            Criar conta na plataforma do heroku
+
+        heroku login
+
+        heroku git:remote -a backend-api-ifal
+        git push heroku master
+
+
+
+
+
+

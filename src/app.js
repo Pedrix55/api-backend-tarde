@@ -11,6 +11,6 @@ app.use('/alunos', alunoRouter);
 
 
 app.listen(process.env.PORT, async () => {
-    const resultDb = await database.sync({force: true});
+    const resultDb = await database.sync({alter: true});
     console.log('server started');
 })
