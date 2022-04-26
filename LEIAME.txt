@@ -21,7 +21,7 @@ Tarefas:
         Instalar dotenv
         Migrar aplicação postgreSQL
 
-    6. Deploy Heroku
+    6. Deploy Heroku - cloud / free
         Configuração de Banco
             DATABASE_URL .env
                 DATABASE_URL=postgres://postgres:postgres@localhost:5432/alunos
@@ -31,10 +31,13 @@ Tarefas:
             Instalação heroku-cli
             Criar conta na plataforma do heroku
 
-        heroku login
+        No nosso terminal
+            heroku login
 
-        heroku git:remote -a backend-api-ifal
-        git push heroku master
+            heroku git:remote -a backend-api-ifal
+            git push heroku master
+
+        heroku config:set PGSSLMODE=no-verify --app api-backend-ifal
 
 
 
