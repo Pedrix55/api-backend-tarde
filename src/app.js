@@ -3,6 +3,7 @@ const env = require('dotenv/config')
 
 const alunoRouter = require('./alunosRouter');
 const libelulaRouter = require('./routers/libelulaRouter');
+const redditbr = require('./routers/redditbrRouter');
 const sosmulher = require('./routers/sosMulherRouter');
 
 const database = require('./db');
