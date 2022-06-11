@@ -14,8 +14,8 @@ const Comunidade = db.define('Comunidade', {
     descricao:{
         type: DataTypes.TEXT
     },
-    comunidade_img:{
-        type: DataTypes.UUID,
+    comunidade_img_path:{
+        type: DataTypes.STRING(255),
         allowNull: true
     }
 }, {

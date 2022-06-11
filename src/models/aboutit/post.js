@@ -17,8 +17,8 @@ const Post = db.define('Post', {
         texto:{
             type: DataTypes.TEXT
         },
-        post_img:{
-            type: DataTypes.UUID,
+        post_img_path:{
+            type: DataTypes.STRING(255),
             allowNull: true
         }
     }, {

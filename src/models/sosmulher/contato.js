@@ -21,7 +21,7 @@ const Contato = db.define('Contato', {
         isEmail: true,   
     },
     imagem_path:{
-        type: DataTypes.UUID,
+        type: DataTypes.STRING(255),
         allowNull: true
     },
     tipo: {

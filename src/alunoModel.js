@@ -20,6 +20,9 @@ const Aluno = db.define('Aluno',{
     data_nascimento: {
         type: DataTypes.DATEONLY
     },
+    data_cadastro: {
+        type: DataTypes.DATEONLY
+    },
     pontuacao:{
         type: DataTypes.INTEGER,
         defaultValue: 0

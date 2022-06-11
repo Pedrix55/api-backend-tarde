@@ -18,8 +18,8 @@ const Produto = db.define('Produto',{
     descricao: {
         type: DataTypes.TEXT
     },
-    imagem: {
-        type: DataTypes.UUID
+    imagem_path: {
+        type: DataTypes.STRING(255),
     }
 },{
     timestamps: true,
