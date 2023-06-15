@@ -6,6 +6,7 @@ const libelulaRouter = require("./routers/libelula/libelulaRouter");
 const aboutItRouter = require("./routers/aboutit/aboutitRouter");
 const sosmulherRouter = require("./routers/sosmulher/sosMulherRouter");
 const PlaylistRouter = require("./playlistApp/routers/playlist");
+const anotacaoRouter = require("./blocoDeNotas/anotacoesRouter")
 
 const database = require("./db");
 
@@ -17,6 +18,7 @@ app.use("/libelula", libelulaRouter);
 app.use("/aboutit", aboutItRouter);
 app.use("/sosmulher", sosmulherRouter);
 app.use("/playlist", PlaylistRouter);
+app.use("/anotacao", anotacaoRouter);
 
 app.listen(process.env.PORT | 3000, async () => {
   const resultDb = await database.sync({});
