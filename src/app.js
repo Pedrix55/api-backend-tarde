@@ -19,6 +19,6 @@ app.use("/sosmulher", sosmulherRouter);
 app.use("/playlist", PlaylistRouter);
 
 app.listen(process.env.PORT | 3000, async () => {
-  const resultDb = await database.sync({ force: true });
+  const resultDb = await database.sync({});
   console.log("server started");
 });
