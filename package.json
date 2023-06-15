@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon ./src/app.js",
-    "deploy":"npm run ./src/app.js"
+    "start": "nodemon ./src/app.js",
+    "deploy":"node ./src/app.js"
   },
   "author": "",
   "license": "ISC",
