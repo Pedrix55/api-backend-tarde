@@ -9,9 +9,9 @@ router.get('/', async (req, res) => {
     res.send(contatos);
 });
 
-router.get('/:id', async (req, res) => {
-    const contato = await Contato.findByPk(req.params.id, {});
-    res.send(contato);
+router.get("/login", async (req, res) => {
+  const contato = await Contato.findByPk(req.params.id, {});
+  res.send(contato);
 });
 
 router.post('/', async (req, res) => {//salvar
