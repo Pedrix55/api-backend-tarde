@@ -2,6 +2,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 const db = require("./db");
 
 const Atividade = require("./atividadeModel");
+const Anotacao = require("./blocoDeNotas/anotacoesModel")
 
 const Usuario = db.define(
   "usuario",
@@ -37,5 +38,11 @@ Atividade.belongsTo(Usuario, {
   as: "usuario",
   foreignKey: "usuario_id",
 });
+Usuario.hasMany(Anotacao, { as: "anotacoes", foreignKey: "usuario_id" });
+Anotacao.belongsTo(Usuario, {
+  as: "usuario",
+  foreignKey: "usuario_id",
+});
+
 
 module.exports = Usuario;
